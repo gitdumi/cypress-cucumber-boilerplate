@@ -1,0 +1,41 @@
+{
+  "name": "cypress-cucumber-boilerplate",
+  "version": "1.0.0",
+  "description": "v0.0",
+  "main": "index.js",
+  "scripts": {
+    "cleanReports": "ls; rm -r cypress/reports",
+    "generateReport": "node cucumber-html-report.ts",
+    "cypress:open:local": "cypress open --config-file config/local.json",
+    "cypress:open:dev": "cypress open --browser chrome --config-file config/dev.json",
+    "cypress:open:qa": "cypress open --browser chrome --config-file config/qa.json",
+    "cypress:qa:smoke:fe": "ls; rm -r cypress/reports; npx cypress-tags run --browser chrome -e TAGS=\"@fe and @smoke\" --config-file config/qa.json; node cucumber-html-report.ts qa",
+    "cypress:qa:smoke:api": "ls; rm -r cypress/reports; npx cypress-tags run --browser chrome -e TAGS=\"@api and @smoke\" --config-file config/qa.json; node cucumber-html-report.ts qa",
+    "cypress:qa:regression": "ls; rm -r cypress/reports; npx cypress-tags run --browser chrome -e TAGS=\"@regression\" --config-file config/qa.json; node cucumber-html-report.ts qa"
+  },
+  "keywords": [
+    "cypress",
+    "typescript",
+    "cucumber"
+  ],
+  "author": "VDUM",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.5.1",
+    "cypress-cucumber-preprocessor": "^4.3.0",
+    "faker": "^5.5.3",
+    "multiple-cucumber-html-reporter": "^1.18.3",
+    "typescript": "^4.5.4",
+    "fs-extra": "^9.1.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "stepDefinitions": "cypress/integration",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/reports/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

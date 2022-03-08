@@ -1,0 +1,9 @@
+{
+  "id": 1,
+  "data": "data"
+}
+
+//  Store any test data you require in config files for each environment
+//  Read the data using cy.fixture('qa_test_data.json').then((data) => { 
+//    code to use the data
+//  })

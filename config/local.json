@@ -1,0 +1,27 @@
+{
+    "env": {
+        "envName": "local",
+        "users": {
+            "admin": {
+                "username": "admin",
+                "password": "password123"
+            }
+        }
+    },
+    "baseUrl": "http://localhost:8080",
+    "restUrl": "https://restful-booker.herokuapp.com",
+    "watchForFileChanges": false,
+    "chromeWebSecurity": false,
+    "fixturesFolder": "cypress/fixtures",
+    "pluginsFile": "cypress/plugins/index.js",
+    "supportFile": "cypress/support/index.js",
+    "ignoreTestFiles": "**/*.{js,ts}",
+    "testFiles": "**/*.{feature,features}",
+    "integrationFolder": "cypress/integration",
+    "videosFolder": "cypress/reports/videos",
+    "screenshotsFolder": "cypress/reports/screenshots",
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "defaultCommandTimeout": 30000,
+    "responseTimeout": 10000
+}
