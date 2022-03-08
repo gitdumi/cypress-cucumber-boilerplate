@@ -32,8 +32,6 @@ The cypress/support and cypress/plugins directory contains custom commands, plug
 
 The cucumber-html-report.ts file is the script that handles generating the html report.
 
-The help/examples directory shows multiple examples provided by the Cypress documentation for test logic, covering most of the features.
-
 Two test examples have been implemented, found in cypress/integration/features. One is an API test that also handles the login and displays an example of passing the bearer token in the cookies (this will be different for each application), which will later handle the logged in user
 
 ## How to run
@@ -42,7 +40,7 @@ Configured scripts are found in the package.json file
 
 Scripts can be run using:
 ```
-$ npm run {scriptName}
+$ npm run ${scriptName}
 ```
 
 ### Examples:
